@@ -3,11 +3,11 @@
 var express = require("express");
 var app = express();
 var routes = require("./routes");
-// we only need the json parser for this project ("body-parser").json
+// We only need the json parser for this project, ("body-parser").json
 var jsonParser = require("body-parser").json;
 
-// mount the parser middleware
-// accessible from the req body property
+// Mount the parser middleware.
+// Accessible from the req.body property.
 app.use(jsonParser());
 
 app.use("/questions", routes);
